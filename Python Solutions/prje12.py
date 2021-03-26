@@ -1,4 +1,5 @@
 import math
+from time import time
 
 def d(n):
     count = 0
@@ -15,10 +16,16 @@ def d(n):
 def t(n):
     return (n**2 + n) // 2
 
+
+st = time()
 j = 0
 while True:
     #print(t(j))
     if(d(t(j)) > 500):
         break
     j += 1
+
 print(t(j))
+print(f"Time taken: {time() - st}")
+
+# Avg Time to run : 3.5 - 4.0 seconds
