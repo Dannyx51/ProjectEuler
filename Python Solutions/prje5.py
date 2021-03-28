@@ -1,3 +1,6 @@
+from time import time
+
+st = time()
 
 i = 0
 m = 0
@@ -12,3 +15,5 @@ while True:
         break
 
 print(m)
+print(f"Time Taken : {time() - st}")
+#Avg Time Taken : 1.1E-2 seconds
