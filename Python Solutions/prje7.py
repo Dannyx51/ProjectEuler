@@ -1,3 +1,7 @@
+from time import time
+
+st = time()
+
 n = 1000000
 
 prime = [True for i in range(n+1)] 
@@ -18,3 +22,5 @@ for i in range(len(prime)):
         lp.append(i)
 
 print(lp[10002])
+print(f"Time taken : {time() - st}")
+#Avg Time Taken: 0.33 seconds

@@ -1,4 +1,7 @@
-l = []
+from time import time
+
+st = time()
+
 for m in range(1,1000):
     for n in range(1,1000):
         if n >= m: break
@@ -8,4 +11,8 @@ for m in range(1,1000):
         if((a + b + c) > 1000): break
         #print(a+b+c)
         if((a + b + c) == 1000):
-            print(a, b, c, a * b * c)
+            print(a * b * c)
+            break
+    
+print(f"Time taken : {time() - st}")
+#Avg Time Taken: 2E-3 seconds

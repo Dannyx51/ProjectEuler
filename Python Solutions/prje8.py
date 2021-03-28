@@ -1,4 +1,6 @@
-from functools import reduce
+from time import time
+
+st = time()
 
 raw = ["73167176531330624919225119674426574742355349194934",
 "96983520312774506326239578318016984801869478851843",
@@ -21,9 +23,7 @@ raw = ["73167176531330624919225119674426574742355349194934",
 "05886116467109405077541002256983155200055935729725",
 "71636269561882670428252483600823257530420752963450"]
 
-rstr = ""
-for i in raw:
-    rstr += i
+rstr = "".join(raw)
 
 prev = 0
 for i in range(len(rstr)-13):
@@ -34,5 +34,5 @@ for i in range(len(rstr)-13):
         prev = gamer
     
 print(prev)
-
-#i am very stupid
+print(f"Time taken : {time() - st}")
+#Avg Time Taken: 4.9E-3 seconds
