@@ -16,4 +16,4 @@ while True:
 
 print(m)
 print(f"Time Taken : {time() - st}")
-#Avg Time Taken : 1.1E-2 seconds
+#Avg Time Taken: 1.1E-2 seconds
