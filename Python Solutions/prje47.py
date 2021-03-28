@@ -10,6 +10,7 @@ search = 4
 
 num = 134000 # lol i updated this every time i incremented by 1k, till i hit the number
 #efficiency stonks
+
 consec = 0
 while True:
     l = set()
