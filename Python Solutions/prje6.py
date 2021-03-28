@@ -9,4 +9,4 @@ for i in range(1,101):
 
 print((ps ** 2) - pt)
 print(f"Time taken : {time() - st}")
-#Avg Time Taken: 
+#Avg Time Taken: 9.9E-4 seconds
