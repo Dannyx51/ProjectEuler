@@ -1,3 +1,6 @@
+from time import time
+
+st = time()
 
 z = 0
 n = m = 1
@@ -12,3 +15,5 @@ while(z < limit):
         total += z
 
 print(total)
+print(f"Time taken : {time() - st}")
+#Avg Time Taken: 9.9E-4 seconds
