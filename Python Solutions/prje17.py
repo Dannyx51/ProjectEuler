@@ -37,16 +37,18 @@ def add3(n):
         return add1(h) + 7
     else:
         return add1(h) + add2(to) + 10
+
 fin = 0 
 for i in range(1001):
     leni = len(str(i))
 
     if leni == 4:
-        fin+= 11
+        fin += 11
     elif leni == 1:
         fin += add1(i)
     elif leni == 2:
         fin += add2(i)
     elif leni == 3:
         fin += add3(i)
+
 print(fin)  
