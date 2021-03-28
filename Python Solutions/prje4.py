@@ -1,3 +1,4 @@
+from time import time
 
 def isP(n):
     s = str(n)
@@ -10,6 +11,8 @@ def isP(n):
         #if n == 906609: print(a , b)
     return(a == b[::-1])
     
+st = time()
+
 l = []
 for i in range(100,1000):
     for j in range(100,1000):
@@ -18,4 +21,7 @@ for i in range(100,1000):
         if isP(n):
             l.append(n)
 l.sort()
+
 print(l[len(l)-1])
+print(f"Time taken : {time() - st}")
+#Avg Time Taken: ~0.8 second
