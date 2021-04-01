@@ -30,21 +30,18 @@ int main() {
 	int moves[15] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 	//printMoves(moves);
 	
-	for (int y = 14; y >= 0; y--){
+	for (int y = 13; y >= 0; y--){
 		if (y != 0){
-			for (int x = 14; x >= 0; x--){
-				py[y][x] = max(py[y][x], py[y-1][x], py[y-1][x-1]);
+			for (int x = 13; x >= 0; x--){
+				py[y][x] = max(py[y][x], py[y+1][x], py[y+1][x+1]);
 			}
 		}
 	}
-
-	for (int i = 0; i < 15; i++){
-		for (int ii = 0; ii < 15; ii++){
-			cout << py[i][ii] << " ";
-		}
-		cout << endl;
+	int num1 = py[1][0];
+	int num2 = py[1][1];
+	if (num1 > num2){
+		cout << py[0][0] + num1;
+	} else {
+		cout << py[0][0] + num2;
 	}
-	cout << py[0][0];
 }
-
-//1074
