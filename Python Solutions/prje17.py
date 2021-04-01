@@ -1,10 +1,12 @@
+from time import time
+
 #does this even need to fully coded out, pretty sure i can do this math on paper
 
-#I broke something but it used to work idk
+#I fixed it
 
 def add1(v):
     n = int(v)
-    if (n > 0 and n < 4) or n == 6 : return 3
+    if 0 < n < 3 or n == 6 : return 3
     elif n == 4 or n == 5 or n == 9: return 4
     elif n == 0: return 0
     else: return 5
@@ -38,6 +40,8 @@ def add3(n):
     else:
         return add1(h) + add2(to) + 10
 
+st = time()
+
 fin = 0 
 for i in range(1001):
     leni = len(str(i))
@@ -51,4 +55,6 @@ for i in range(1001):
     elif leni == 3:
         fin += add3(i)
 
-print(fin)  
+print(fin) 
+print(f"Time taken : {time() - st}")
+#Avg Time Taken: 2E-3 seconds
