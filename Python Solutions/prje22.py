@@ -1,19 +1,5 @@
-#this one is kinda iffy but ok
-
-txt = open("C:\\Users\\dhaan\\Documents\\PythonPrjs\\ProjectEuler\\prje22_names.txt","r")
-raw = txt.read()
-txt.close()
-raw = raw.replace("\"","")
-
-names = raw.split(",")
-names.sort()
-
-points = []
-total = 0
-for i in range(len(names)):
-    v = 0
-    for x in names[i]:
-        v += ord(x) - 64
-    total += v * (i+1)
-
-print(total)
+from time import time
+st = time()
+print(sum([(z[0] * z[1]) for z in enumerate([sum([(ord(x) - 64) for x in i]) for i in sorted(open("Python Solutions\\prje22_names.txt","r").read().replace("\"","").split(","))],1)]))
+print(f"Time taken : {time() - st}")
+#Avg Time Taken: 5E-3 seconds
