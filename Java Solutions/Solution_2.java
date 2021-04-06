@@ -14,26 +14,28 @@ import java.util.*;
  */
 
 class Main {
-	  public static void main(String[] args) {
-		  long start = System.currentTimeMillis();
-		  double ans = 0;
-			ArrayList<Integer> fib = new ArrayList<Integer>();
-			int i = 1;
-			fib.add(1);
-			fib.add(1);
-			//System.out.println("chkpt");
-			while (i < 4000000) {
-				//System.out.println("chkpt1");
-				fib.add(fib.get(fib.size()-1) + fib.get(fib.size()-2));
-				i = fib.get(fib.size() - 1);
-				if (i > 4000000) fib.remove(fib.size() - 1);
-			}
+	public static void main(String[] args) {
+		long start = System.currentTimeMillis();
+		double ans = 0;
+		ArrayList<Integer> fib = new ArrayList<Integer>();
+		int i = 1;
+		fib.add(1);
+		fib.add(1);
+		// System.out.println("chkpt");
+		while (i < 4000000) {
+			// System.out.println("chkpt1");
+			fib.add(fib.get(fib.size() - 1) + fib.get(fib.size() - 2));
+			i = fib.get(fib.size() - 1);
+			if (i > 4000000)
+				fib.remove(fib.size() - 1);
+		}
 
-			for (int x = 0; x < fib.size(); x++) {
-				if (fib.get(x) % 2 == 0) ans += fib.get(x);
-			}
-		    long end = System.currentTimeMillis() - start;
-		    System.out.println(ans);
-		    System.out.println(end);
-	  }
+		for (int x = 0; x < fib.size(); x++) {
+			if (fib.get(x) % 2 == 0)
+				ans += fib.get(x);
+		}
+		long end = System.currentTimeMillis() - start;
+		System.out.println(ans);
+		System.out.println(end);
+	}
 }
