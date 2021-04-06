@@ -13,9 +13,10 @@ Personal rules:
 • Each solution is posted to this Repo once completed with the above formatted output and:
     A. The final working solution to the problem, duh, with no extra code
     B. A header comment with: 
+        • The problem
+        • The answer
         • Average time to run (average of 5 runs) in miliseconds
         • Short explanation of solution
-        • The answer
 • All solutions necisating a text file of given data to run are accompanied by such. 
 • Some solutions are accompanied by an extra file(s) that document versions of the solution through time.
   For example: Problem 15 is accompanied by a file containing other solutions to the problem as I was attempting to solve it that are not efficient enough
