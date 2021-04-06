@@ -27,5 +27,5 @@ Personal rules:
 • If the solution to a problem requires some algorithm at the core of the solution, native or pre-made algortithms/methods/libraries should be resisted.
   This is somewhat arbitrary. 
   For example: Problem 13 wants the sum of 50 100-digit numbers, and large numbers being the crux of the problem I resisted using BigInteger in my solution.
-  • If the solution to a problem can utilize some mathematical formula at the core of the solution, the formula should be resisted.
+• If the solution to a problem can utilize some mathematical formula at the core of the solution, the formula should be resisted.
   For example: Problem 15 wants the lattice paths through a 20x20 grid. I resisted using the mathematical formula for the solution.
