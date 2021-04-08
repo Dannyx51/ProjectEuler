@@ -22,7 +22,7 @@ Personal rules:
   For example: Problem 15 is accompanied by a file containing other solutions to the problem as I was attempting to solve it that are not efficient enough
   but that I wanted to document.
 • For some solutions, custom classes with user defined data types were created to assist the solution. 
-• These files are compiled into a folder and each used for a solution also accompany that solution.
+  These files are compiled into a folder and each used for a solution also accompany that solution.
 • Solutions are not plagiarized, and looking up code for algorithms should be resisted. At least until the optimization stage of a solution.
 • If the solution to a problem requires some algorithm at the core of the solution, native or pre-made algortithms/methods/libraries should be resisted.
   This is somewhat arbitrary. 
