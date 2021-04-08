@@ -1,15 +1,20 @@
 #include <iostream>
-
-using namespace :: std;
-
+#include <chrono>
+using namespace ::std;
+using namespace chrono;
 int main() {
-  int sum = 0;
-  for (int i = 1; i < 1000; i++){
-    if (i % 3 == 0){
-      sum += i;
-    } else if (i % 5 == 0){
-      sum += i;
+    auto start = high_resolution_clock::now();
+    int sum = 0;
+    for (int i = 1; i < 1000; i++) {
+        if (i % 3 == 0) {
+            sum += i;
+        }
+        else if (i % 5 == 0) {
+            sum += i;
+        }
     }
-  }
-  cout << sum;
+    auto end = high_resolution_clock::now();
+    auto diff = duration_cast<microseconds>(end - start);
+    cout << sum << " Solution found in " << diff.count() << " microseconds " << endl;
+    return 0;
 }
