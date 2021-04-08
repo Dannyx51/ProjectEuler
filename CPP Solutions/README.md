@@ -7,7 +7,7 @@ Rules:
 • All solutions are timed with the same, start to just before output
 • Ouputs are to be formatted the same:
   - Solution
-  - Time in milliseconds
+  - Time in microseconds
 • All of the solutions are to be completed in chronological order, no skipping!
   - You are allowed to move backward to optomise a solution
 • Any extra files will be included
