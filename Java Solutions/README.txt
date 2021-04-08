@@ -17,7 +17,7 @@ Personal rules:
         • The answer
         • Average time to run (average of 5 runs) in miliseconds
         • Short explanation of solution
-• All solutions necisating a text file of given data to run are accompanied by such. 
+• All solutions necessitating a text file of given data to run are accompanied by such. 
 • Some solutions are accompanied by an extra file(s) that document versions of the solution through time.
   For example: Problem 15 is accompanied by a file containing other solutions to the problem as I was attempting to solve it that are not efficient enough
   but that I wanted to document.
