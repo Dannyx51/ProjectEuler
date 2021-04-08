@@ -1,6 +1,7 @@
 import time
 from math import *
-def d(n):
+
+def d(n:int) -> int:
   s = 1
   st = sqrt(n)
   for i in range(2,int(st)+1):
@@ -8,7 +9,7 @@ def d(n):
         s += i + n / i
   if int(st) == st:
     s -= st
-  return s
+  return int(s)
 
 s = time.time()
 #create set of [ab]undant numbers
@@ -24,7 +25,6 @@ for i in range(1, limit):
   if not any((i - n in ab) for n in ab):
     total += i
 
-
-#print(total)
+print(total)
 print("Runtime: " + str(time.time()-s))
 #efficiency bonk
