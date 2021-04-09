@@ -1,5 +1,7 @@
 from time import time
 
+st = time()
+
 lperi = []
 m = 2
 while m < 10:
