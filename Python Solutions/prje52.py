@@ -16,3 +16,4 @@ while True:
   i += 1
 
 print("Runtime: " + str(time.time()-s))
+#Avg Time Taken: 4E-2 seconds
