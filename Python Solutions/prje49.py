@@ -1,5 +1,4 @@
 import time
-from math import *
 from itertools import permutations
 
 def checkdif(n):
@@ -9,7 +8,6 @@ def checkdif(n):
       if n[j] + diff in n:
         return True
   return False
-
 
 st = time.time()
 
