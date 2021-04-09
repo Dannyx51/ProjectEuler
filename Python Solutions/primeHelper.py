@@ -1,6 +1,19 @@
 # Holder class for useful prime functions
+from math import gcd
 
 class Prime:
+    @staticmethod
+    def relativePrime(n:int, tot = False) -> list:
+        ret = 0
+        if tot:
+            for i in range(n):
+                if gcd(i,n) == 1:
+                    ret += 1
+        else:
+            ret = [i for i in range(n) if gcd(i,n) == 1]
+        if n % 1000 == 0:print(n)
+        return ret
+
     @staticmethod
     def genPrime(n:int) -> list: # Generates a boolean list where all true indices are prime
         prime = [True for i in range(n+1)] 
@@ -40,9 +53,9 @@ class Prime:
         if not n % 5: return False
 
         arr = [2,3]
-        return not any([Prime.Witness(x,n) for x in arr])
+        return not any([Prime.__Witness(x,n) for x in arr])
 
-    def Witness(a:int, n:int) -> bool:
+    def __Witness(a:int, n:int) -> bool:
         t = 0
         u = n - 1
         while ((u & 1) == 0):
