@@ -2,10 +2,10 @@ from math import sqrt
 from time import time
 
 def penta(n):
-    return (n * ((3 * n )- 1)) // 2
+    return (n * ((3 * n) - 1)) // 2
 
 def isPenta(n):
-    x = (sqrt(1 + (24 * n)) + 1 )/ 6
+    x = (sqrt(1 + (24 * n)) + 1 ) / 6
     return x == int(x)
 
 st = time()
@@ -25,4 +25,4 @@ while not found:
             break
 
 print(f"Time taken: {time() - st}")
-# why is it this slow
+#Avg Time Taken: 1.55 seconds
