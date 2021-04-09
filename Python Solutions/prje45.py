@@ -1,3 +1,5 @@
+from time import time
+
 def t(n):
     return int(n * (n+1)/2)
 
@@ -7,6 +9,8 @@ def p(n):
 def h(n):
     return (1 + (8 * n + 1) ** 0.5) % 4 == 0
 
+st = time()
+
 i = 286
 while True:
     num = t(i)
@@ -14,6 +18,9 @@ while True:
         print(num)
         break
     i += 1
+
+print(f"Time taken : {time() - st}")
+#Avg Time Taken : 4E-2 seconds
 
 
 #LMAOOOOOOOO IM AN IDIOT LOOK AT BELOW
