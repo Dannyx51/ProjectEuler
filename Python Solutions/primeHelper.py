@@ -11,11 +11,11 @@ class Prime:
                     ret += 1
         else:
             ret = [i for i in range(n) if gcd(i,n) == 1]
-        if n % 1000 == 0:print(n)
         return ret
 
     @staticmethod
-    def genPrime(n:int) -> list: # Generates a boolean list where all true indices are prime
+    def genPrime(n:int, noBool = False) -> list: # Generates a boolean list where all true indices are prime by default,
+                                                 # if noBool = True, returns an integer list instead
         prime = [True for i in range(n+1)] 
         p = 2
         while (p * p <= n):             
@@ -25,7 +25,12 @@ class Prime:
                 for i in range(p * p, n+1, p): 
                     prime[i] = False
             p += 1
-        return prime
+        
+        prime[0], prime[1] = 0,0
+        if noBool:
+            return [x for x in range(len(prime)) if prime[x]]
+        else: 
+            return prime
 
     @staticmethod
     def isPrime(n:int) -> bool:
