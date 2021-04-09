@@ -1,18 +1,12 @@
 from itertools import permutations
+from functools import reduce
+from time import time
 
+st = time()
 
-# i originally made this on a chromebook, so some of the stuff is gonna be icky bc of power issues i worked around
 lDiv = [2,3,5,7,11,13,17]
 
-s = list(permutations("0123456789"))
-
-for i in range(len(s)):
-    t = ""
-    for x in s[i]:
-        t += x
-    s[i] = t
-print("Done Converting!")
-print()
+s = [reduce(lambda x,y : x + y, z) for z in list(permutations("0123456789"))]
 
 l = []
 for i in range(len(s)):
@@ -24,9 +18,6 @@ for i in range(len(s)):
     if(count == 7):
         l.append(int(s[i]))
 
-total = 0
-for i in l:
-    total += i
-print(total)
-
-#worked first try baybeeeeeeee
+print(sum(l))
+print(f"Time taken : {time() - st}")
+#Avg Time Taken: 15.44 seconds
