@@ -1,28 +1,10 @@
-from itertools import permutations
+from time import time
+from primeHelper import Prime
 
-#finds primes in a ridiculously slow fashion
-#for i in range(12,1000000):
-#    for j in lp:
-#        if i % j == 0 or i == 1:
-#            break
-#        if j == lp[len(lp)-1]:
-#            lp.append(i)
-#            print(i)
-
-#i'll be honest i straight up ripped this from the interwebs but its a sieve of erastothenes (probably misspelt that)
+st = time()
 n = 1000000
 
-prime = [True for i in range(n+1)] 
-p = 2
-while (p * p <= n): 
-        
-    # If prime[p] is not changed, then it is a prime 
-    if (prime[p] == True): 
-            
-        # Update all multiples of p 
-        for i in range(p * p, n+1, p): 
-            prime[i] = False
-    p += 1
+prime = Prime.genPrime(n)
 
 count = 0
 for i in range(2,n):
@@ -40,3 +22,5 @@ for i in range(2,n):
         count += 1
 
 print(count)
+print(f"Time taken : {time() - st}")
+#Avg Time Taken: 0.35 seconds
