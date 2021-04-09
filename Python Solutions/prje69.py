@@ -4,6 +4,12 @@ from time import time
 st = time()
 
 n = 10
-primes = Prime.genPrime(n,noBool=True)
+primes = Prime.genPrime(n, noBool=True)
 
-print(primes)
+l = {}
+for i in primes:
+    x = i
+    while x < n:
+        pass
+
+print(l)

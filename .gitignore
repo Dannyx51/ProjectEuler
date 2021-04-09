@@ -1,2 +1,5 @@
-#ignoring vscode settings
+# ignoring vscode settings
 /.vscode
+
+# hello pls ignore the cache too
+*/__pycache__
