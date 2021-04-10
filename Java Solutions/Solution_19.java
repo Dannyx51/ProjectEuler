@@ -39,9 +39,7 @@ class Main {
 
 		for (int i = 1900; i < 2001; i++)
 			for (int ii = 0; ii < months.length; ii++) {
-				if (i != 1900)
-					if (numDays % 7 == 6)
-						ans++;
+				if (i != 1900) if (numDays % 7 == 6) ans++;
 				numDays += months[ii] + (isLeap(i) && ii == 1 ? 1 : 0); // accounts for leap year
 
 				// if (numDays % 7 == 6) System.out.println(dayNames[numDays % 7] + " " +
