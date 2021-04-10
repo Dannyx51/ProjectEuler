@@ -31,19 +31,18 @@ class Main {
 
 		int[] months = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 
-		// String[] monthNames = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul",
-		// "Aug", "Sep", "Oct", "Nov", "Dec"};
-		// String[] dayNames = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"}
+		//String[] monthNames = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+		//String[] dayNames = {"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"}
 
-		int numDays = 0; // Jan 1, 1900 was a Monday == 0
+		int numDays = 0; // Jan 1, 1900 was a Monday, == 0
 
 		for (int i = 1900; i < 2001; i++)
 			for (int ii = 0; ii < months.length; ii++) {
 				if (i != 1900) if (numDays % 7 == 6) ans++;
-				numDays += months[ii] + (isLeap(i) && ii == 1 ? 1 : 0); // accounts for leap year
+				numDays += months[ii] + (isLeap(i) && ii == 1 ? 1 : 0); //accounts for leap year
 
-				// if (numDays % 7 == 6) System.out.println(dayNames[numDays % 7] + " " +
-				// monthNames[ii] + ", " + i);
+				//if (numDays % 7 == 6) System.out.println(dayNames[numDays % 7] + " " +
+				//monthNames[ii] + ", " + i);
 			}
 
 		long end = System.currentTimeMillis() - start;
