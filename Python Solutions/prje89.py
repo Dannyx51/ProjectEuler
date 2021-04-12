@@ -73,7 +73,7 @@ def ItoR(num:int) -> str:
 
     return ret
 
-lRomGiven = open('p089_roman.txt','r').read().split("\n")
+lRomGiven = open('Python Solutions\\prje89_roman.txt','r').read().split("\n")
 
 concat = len(reduce(lambda x,y: x + y, lRomGiven))
 
