@@ -2,7 +2,7 @@ import time
 
 st = time.time()
 
-file = open("p067_triangle.txt", "r+")
+file = open("Python Solutions\\prje67_triangle.txt", "r+")
 raw = file.readlines()
 file.close()
 
