@@ -14,8 +14,9 @@ class Prime:
         return ret
 
     @staticmethod
-    def genPrime(n:int, noBool = False) -> list: # Generates a boolean list where all true indices are prime by default,
-                                                 # if noBool = True, returns an integer list instead
+    def genPrime(n:int, noBool = False) -> list: 
+        # Generates a boolean list where all true indices are prime by default,
+        # if noBool = True, returns an integer list instead
         prime = [True for i in range(n+1)] 
         p = 2
         while (p * p <= n):             
