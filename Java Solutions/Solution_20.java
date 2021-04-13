@@ -28,8 +28,6 @@ class Main {
 		
 		String res = "1";
 		
-		System.out.println(multiply("100", "10"));
-		
 		for (int num = 100; num > 0; num--) {
 			res = multiply(res, String.valueOf(num));
 		}
