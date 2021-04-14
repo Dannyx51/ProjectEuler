@@ -9,9 +9,9 @@ import java.math.*;
  * 012   021   102   120   201   210
  * What is the millionth lexicographic permutation of the digits 0, 1, 2, 3, 4, 5, 6, 7, 8 and 9?
  * 
- * Solution: 278391560.
+ * Solution: 2783915460.
  * Average Time: 0.6ms
- * 
+ *
  * There are 10! permutations. If we assume the first digit is 0, there will be 9! permutations of
  * the other 9 digits. Since 9! < 1000000, we know the first digit is actually higher 
  * than 0 because the first 9! permutations begin with the digit 0. 
@@ -35,10 +35,11 @@ class Main {
 		long yet = 1000000;
 		for (int i = 9; i > 0; i--) {
 			long poss = factorial(i);
-			int digit = (int) (yet / poss);
+			int digit = (int) ((yet - 1) / poss);
 			result += nums.remove(digit);
 			yet -= (digit * poss);
 		}
+		result += nums.get(0);
 		
 		ans = Long.valueOf(result);
 		
