@@ -12,9 +12,10 @@ import java.math.*;
  * Solution: 278391560.
  * Average Time: 0.6ms
  * 
- * There are 10! permutations. If we assume the first digit is zero, there will be 9! permutations.
- * Since 9! < 1000000, we know the first digit is higher than 0 because the first 9! permutations
- * begin with the digit 0. In fact, the first digit is higher than 1. However,
+ * There are 10! permutations. If we assume the first digit is 0, there will be 9! permutations of
+ * the other 9 digits. Since 9! < 1000000, we know the first digit is actually higher 
+ * than 0 because the first 9! permutations begin with the digit 0. 
+ * In fact, the first digit is higher than 1. However,
  * since 9! * 4 > 1000000 (9! * 4 would cover all permutations beginning with 0, 1, 2, & 3),
  * we know the first digit is lower than 3.
  * Using this process of elimination method all the way through, each digit of the answer reveals itself.
