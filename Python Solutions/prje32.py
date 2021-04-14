@@ -1,3 +1,5 @@
+from time import time
+
 # came back to it after a while, decided that the way i was attempting to solve this is too slow (permutations requires more time than the math itself)
 # we need 'a * b = c' where a b c concatonated include all digits 1-9 with no repeats - the function concat takes care of the concatonation while
 # the function pan takes care of checking the digits. 
@@ -9,6 +11,8 @@ def concat(a,b,c):
 
 def pan(s):
     return set(s) == set('123456789')
+
+st = time()
 
 # the set of answers
 l = set()
@@ -33,3 +37,5 @@ for i in range(11,100):
         if pan(n): l.add(i*x)
 
 print(f"sum = {sum(l)}")
+print(f"Time taken : {time() - st}")
+#Avg Time Taken: 0.12 seconds
