@@ -1,6 +1,9 @@
 from math import gcd
-d, n = 1, 1
+from time import time
 
+st = time()
+
+d, n = 1, 1
 for i in range(1,10):
     for x in range(1,i):
         for a in range(1,x):
@@ -9,3 +12,5 @@ for i in range(1,10):
                 n *= a
                 
 print(d / gcd(n,d))
+print(f"Time taken : {time() - st}")
+#Avg Time Taken: 0? seconds
