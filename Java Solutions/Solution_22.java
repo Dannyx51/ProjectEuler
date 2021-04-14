@@ -12,8 +12,7 @@ import java.math.*;
  * Solution: 871198282.
  * Average Time: 204.4ms
  * 
- * Looping up to 10000, if i is equal to the sum of the divisors of the sum of the divisors of i, then
- * add i to total
+ * Alphabetize the list, then find the value of each word and multiply by its position.
  * 
  */
 
