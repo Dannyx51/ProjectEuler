@@ -33,6 +33,11 @@ public class Tuple<E1, E2> {
 		this.y = y;
 	}
 	
+	public void xy(E1 x, E2 y) {
+		x(x);
+		y(y);
+	}
+	
 	
 	
 	public boolean equals(Tuple<E1, E2> other) {
