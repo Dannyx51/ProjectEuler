@@ -15,6 +15,8 @@ import java.math.*;
  *
  * In a similar method to long-hand division, one divided by a given number (n)
  * can be determined by doing (int) 10 / n, then (int) 10(10 % n) / n, and looping that.
+ *
+ * Uses Tuple.Java
  */
 
 class Main {
