@@ -1,4 +1,4 @@
-
+@author Lincoln Edsall 
 
 public class IntegerAsString {
 	
