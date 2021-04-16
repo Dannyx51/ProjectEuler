@@ -17,8 +17,9 @@ import java.math.*;
  * Solution: 669171001
  * Average Time: 0ms
  *
- * The corner numbers of each inner-square (1x1, 3x3, etc) follow a pattern. The first four are found by
- * adding 2 the previous, the next four are found by adding 4 to the previous. Then 6, then 8, and so on.
+ * Uses a nested for loop to make every combination of 2-100 powers, and if a list
+ * doesn't already contain that value, add it to the list. The size of the list is the
+ * answer at the end.
  * 
  * Uses IntegerAsString.java
  * 
