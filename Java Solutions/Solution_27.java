@@ -18,8 +18,8 @@ import java.math.*;
  * Solution: -59231
  * Average Time: 1472.2ms
  *
- * Loop from -1000 to 1000 for a and b, and within the nested for loops test how long n returns a prime value with
- * the value of a and b. (0->)
+ * Loop from -1000 to 1000 for a and b, and within the nested for loops, test for
+ * how many values n returns a prime value with the value of a and b.
  * 
  * Uses Tuple.java
  */
