@@ -15,7 +15,7 @@
  * I don't know how true this is, but it turned out alright for this problem. Assuming it is true,
  * and knowing that the numbers in the multiplicand/multiplier/product identity have to have a total length of 9,
  * len(1) * len(4) = len(4) and len(2) * len(3) = len(4) are the only possibilities for pandigital identities.
- * So, looping through every 4 digit number and checking if it can be divided by a 2 or 3 digit number
+ * So, looping through every 4 digit number and checking if it can be divided by a 1 or 2 digit number
  * gives possible pandigital identities.
  * The pandigital method checks to see if the digits of the identity contain each number 1-9 by
  * splitting up the identity into an integer array and comparing with a boolean array.
