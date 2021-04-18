@@ -5,16 +5,20 @@
  * Find the sum of all products whose multiplicand/multiplier/product identity can be written as a 1 through 9 pandigital.
  * HINT: Some products can be obtained in more than one way so be sure to only include it once in your sum.
  * 
- * Solution: 73682
- * Average Time: 35.2ms
+ * Solution: 45228
+ * Average Time: 66.4ms
  *
- * Recursion time :)
- * The recursion function starts with the biggest denominations and works its way to the smaller ones:
- * To be sure there are no duplicates, once a denomination is used in a combo, 
- * a higher one cannot be used again in the combo. Also the function uses integers instead
- * of decimals because easier.
- * 100 + 50 + 20 + 10 + 10 + 10 == 200 is one of the combos, but
- * 50 + 100 + 10 + 10 + 10 + 20 == 200 will never be one of them.
+ * It appears to me that in any given x * y = z, where len(n) equals the number of digits in the number n:
+ * len(x) + len(y) = len(x) 
+ * OR 
+ * len(x) + len(y) = len(x) + 1
+ * I don't know how true this is, but it turned out alright for this problem. Assuming it is true,
+ * and knowing that the numbers in the multiplicand/multiplier/product identity have to have a total length of 9,
+ * len(1) * len(4) = len(4) and len(2) * len(3) = len(4) are the only possibilities for pandigital identities.
+ * So, looping through every 4 digit number and checking if it can be divided by a 2 or 3 digit number
+ * gives possible pandigital identities.
+ * The pandigital method checks to see if the digits of the identity contain each number 1-9 by
+ * splitting up the identity into an integer array and comparing with a boolean array.
  * 
  * Uses IntegerAsString.java
  * 
