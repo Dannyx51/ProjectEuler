@@ -25,8 +25,6 @@ class Main {
 	public static void main(String[] args) {
 		long start = System.currentTimeMillis();
 		double ans = 0;
-
-		System.out.println(isPan(1333, 1, 1333));
 		
 		for (int i = 1000; i < 10000; i++)
 			for (int ii = 1; ii < 100; ii++)
