@@ -1,5 +1,2 @@
 # ignoring vscode settings
 /.vscode
-
-# hello pls ignore the cache too
-/Python Solutions/__pycache__
