@@ -6,7 +6,8 @@ class Prime:
     def relativePrime(n:int, tot = False) -> list:
         ret = 0
         if tot:
-            for i in range(n):
+            for i in range(1,n):
+                if not (n % 2) and not (i % 2): continue
                 if gcd(i,n) == 1:
                     ret += 1
         else:
@@ -14,7 +15,7 @@ class Prime:
         return ret
 
     @staticmethod
-    def genPrime(n:int, noBool = False) -> list: 
+    def genPrime(n:int, noBool = False, lowerBound = 0) -> list: 
         # Generates a boolean list where all true indices are prime by default,
         # if noBool = True, returns an integer list instead
         prime = [True for i in range(n+1)] 
@@ -29,9 +30,9 @@ class Prime:
         
         prime[0], prime[1] = 0,0
         if noBool:
-            return [x for x in range(len(prime)) if prime[x]]
+            return [x for x in range(lowerBound,len(prime)) if prime[x]]
         else: 
-            return prime
+            return prime[lowerBound:]
 
     @staticmethod
     def isPrime(n:int) -> bool:
