@@ -14,3 +14,4 @@ for i in lp: # look at the wikipedia definition for the totient function for thi
         
 print(res)
 print(f"Time taken : {time() - st}")
+#Avg Time Taken: 3E-4 seconds
