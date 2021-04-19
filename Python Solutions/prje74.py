@@ -26,9 +26,7 @@ for i in range(1,limit):
         
         lSize += 1
         if lSize > 60: break
-
-    
-
+        
     if lSize == 60:
         count += 1
 

@@ -3,7 +3,7 @@ from time import time
 
 def d(n):
     count = 0
-    for i in range(1, (int)(math.sqrt(n)) + 1) : 
+    for i in range(1, int(math.sqrt(n)) + 1) : 
         if (n % i == 0): 
             # If divisors are equal, 
             # count only one 
@@ -27,5 +27,4 @@ while True:
 
 print(t(j))
 print(f"Time taken: {time() - st}")
-
 # Avg Time to run : 3.5 - 4.0 seconds

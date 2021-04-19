@@ -4,7 +4,7 @@ from primeHelper import Prime
 st = time()
 n = 1000000
 
-prime = Prime.genPrime(n)
+prime = Prime.genPrime(n, noBool = False)
 
 count = 0
 for i in range(2,n):

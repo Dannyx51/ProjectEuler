@@ -4,7 +4,7 @@ from time import time
 
 st = time()
 
-lp = [x for x in Prime.genPrime(200000,noBool = True) if len(str(x)) - len(set(str(x))) >= 3]
+lp = [x for x in Prime.genPrime(200000) if len(str(x)) - len(set(str(x))) >= 3]
 
 def rep(s:int) -> list:
     ret = []

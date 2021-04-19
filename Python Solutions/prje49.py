@@ -1,5 +1,6 @@
 import time
 from itertools import permutations
+from primeHelper import Prime
 
 def checkdif(n):
   for i in range(len(n)-1):
@@ -11,26 +12,8 @@ def checkdif(n):
 
 st = time.time()
 
-n = 10000
-prime = [True for i in range(n+1)] 
-p = 2
-while (p * p <= n): 
-        
-    # If prime[p] is not changed, then it is a prime 
-    if (prime[p] == True): 
-            
-        # Update all multiples of p 
-        for i in range(p * p, n+1, p): 
-            prime[i] = False
-    p += 1
+lp = Prime.genPrime(10000,lowerBound = 1500)
 
-lp = []
-for i in range(1500,len(prime)-1):
-    if prime[i]:
-        lp.append(i)
-
-del prime
-#print(lp)
 for i in lp:
   p = list(permutations(str(i)))
   a = [int(''.join(c)) for c in p]
@@ -38,7 +21,9 @@ for i in lp:
   a.sort()
   if len(a) >= 3:
     if checkdif(a):
-      print(a)
+      a = [str(x) for x in a]
+      print(''.join(a))
       break
 
-print("Runtime: " + str(time.time()-st))
+print("Time taken : " + str(time.time()-st))
+#Avg Time Taken: 4E-3 seconds

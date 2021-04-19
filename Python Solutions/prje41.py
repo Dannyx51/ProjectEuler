@@ -7,11 +7,7 @@ st = time()
 
 l = [int(reduce(lambda x,y: x + y, p)) for p in list(permutations("1234567"))]
 
-n = 7654321
-
-prime = Prime.genPrime(n)
-
-lp = [i for i in range(7123456, len(prime)) if prime[i]]
+lp = Prime.genPrime(7654321,lowerBound = 7123456)
 
 lpan = []  
 for i in l:
@@ -23,7 +19,6 @@ for i in l:
     if gaming:
         lpan.append(i)   
 
-
 print(max(lpan))
 print(f"Time taken : {time() - st}")
-#Avg Time Taken: 15.3 seconds
+# Avg Time Taken: 15.3 seconds
