@@ -5,7 +5,7 @@ st = time()
 i = 0
 m = 0
 while True:
-    i += (42840)
+    i += 9699690
     for j in range(2,21):
         if i % j != 0:
             break   
@@ -16,4 +16,4 @@ while True:
 
 print(m)
 print(f"Time Taken : {time() - st}")
-#Avg Time Taken: 1.1E-2 seconds
+#Avg Time Taken: 1.1E-4 seconds
