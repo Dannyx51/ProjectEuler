@@ -16,8 +16,8 @@ class Prime:
 
     @staticmethod
     def genPrime(n:int, noBool = True, lowerBound = 0) -> list: 
-        # Generates a boolean list where all true indices are prime by default,
-        # if noBool = True, returns an integer list instead
+        # Generates an integer list of primes between lowerBound and n,
+        # if noBool = False, returns an boolean list in range(lowerBound,n) where if index is prime, value is true
         prime = [True for i in range(n+1)] 
         p = 2
         while (p * p <= n):             
