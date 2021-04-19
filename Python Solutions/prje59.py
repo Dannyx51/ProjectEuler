@@ -62,5 +62,3 @@ print(''.join(list(map(chr,decrypted))))
 
 # Oh it's more stuff about euler!
 # neato
-
-
