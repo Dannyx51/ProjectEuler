@@ -2,4 +2,4 @@
 /.vscode
 
 # hello pls ignore the cache too
-*/__pycache__
+/Python Solutions/__pycache__
