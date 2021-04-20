@@ -3,8 +3,8 @@ from math import gcd
 
 class Prime:
     @staticmethod
-    def relativePrime(n:int, tot = False) -> list:
-        ret = 0
+    def relativePrime(n:int, tot = False) -> list: # Returns a list of relative primes to n by default
+        ret = 0                                    # Or returns the number of relative primes to n if tot = true
         if tot:
             for i in range(1,n):
                 if not (n % 2) and not (i % 2): continue
@@ -35,7 +35,7 @@ class Prime:
             return prime[lowerBound:]
 
     @staticmethod
-    def isPrime(n:int) -> bool:
+    def isPrime(n:int) -> bool: # returns if a number is prime or not
         if n <= 1: return False
         if n == 2: return True
         if not n % 2: return False
@@ -51,7 +51,7 @@ class Prime:
         return True
 
     @staticmethod
-    def isPseudoPrime(n:int) -> bool:
+    def isPseudoPrime(n:int) -> bool: #returns if a number is pseudoprime/prime
         if n <= 1: return False 
         if n == 2: return True
         if not n % 2: return False
