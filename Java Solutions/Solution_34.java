@@ -4,8 +4,8 @@
  * Find the sum of all numbers which are equal to the sum of the factorial of their digits.
  * Note: As 1! = 1 and 2! = 2 are not sums they are not included.
  * 
- * Solution: 443839
- * Average Time: 351.2ms
+ * Solution: 40730
+ * Average Time: 1871.4ms
  *
  * Works very similarly to #30. Find the upper limit then loop checking if the numbers in the range
  * fit the function;
