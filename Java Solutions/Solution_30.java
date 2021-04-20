@@ -14,7 +14,7 @@
  * Literally check each number from a lower limit to an upper limit to see if it fits the function.
  * Determining the upper limit was difficult, but because the highest 7 digit number is 9999999, and the
  * function's output for this number is less than a 7 digit number, it is impossible for an eight digit number
- * to work for the function. So the upper limit is 9^5 * 7.
+ * to work for the function. So the upper limit is 9^5 * 7, and the first loop calculates this.
  * 
  * Uses IntegerAsString.java
  * 
@@ -25,7 +25,14 @@ class Main {
 		long start = System.currentTimeMillis();
 		double ans = 0;
 
-		IntegerAsString upperLimit = new IntegerAsString(IntegerAsString.multiply(IntegerAsString.pow(9, 5), "7"));
+		IntegerAsString upperLimit = new IntegerAsString("0");
+		for (int i = 0; true; i++) {
+			String nine5Multiple = IntegerAsString.multiply(IntegerAsString.pow(9, 5), String.valueOf(i));
+			if (nine5Multiple.length() < i) {
+				upperLimit = new IntegerAsString(nine5Multiple);
+				break;
+			}
+		}
 		
 		for (IntegerAsString i = new IntegerAsString("2"); i.isLessThan(upperLimit); i.increment())
 			if (i.equals(IntegerAsString.valueOf(sumPower(i.digits(), 5))))
