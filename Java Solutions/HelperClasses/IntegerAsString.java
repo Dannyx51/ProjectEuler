@@ -182,5 +182,13 @@ public class IntegerAsString {
 			res += digits[i] * Math.pow(10, this.length() - 1 - i);
 		return res;
 	}
+	
+	public static String factorial(int n) {
+		String res = String.valueOf(n);
+		for (int i = n - 1; i > 1; i--) {
+			res = multiply(res, String.valueOf(i)); 
+		}
+		return res;
+	}
 
 }
