@@ -5,7 +5,8 @@ isPrime = Prime.isPrime
 
 limit = 10000
 
-lp = Prime.genPrime(limit)
+lp = set(Prime.genPrime(limit))
+searchlist = set(Prime.genPrime(pow(10,6)))
 
 def check(a:int,b:int) -> bool:
     v1 = int(str(a) + str(b))
@@ -13,10 +14,10 @@ def check(a:int,b:int) -> bool:
     
     pv1, pv2 = False, False
 
-    if v1 < limit: pv1 = v1 in lp
+    if v1 < limit: pv1 = v1 in searchlist
     else: pv1 = isPrime(v1)
 
-    if v2 < limit: pv2 = v2 in lp
+    if v2 < limit: pv2 = v2 in searchlist
     else: pv2 = isPrime(v2)
 
     return pv1 and pv2
