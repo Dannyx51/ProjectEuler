@@ -82,6 +82,7 @@ for i in range(len(gameBoard)):
 # Y,X     : just the y,x coord on the map
 boolMap = [[[1 for i in range(9)] for j in range(9)] for k in range(9)]
 
+# validate columns and rows
 for z in range(9):
     for n in range(9):
         if z + 1 not in chy(gameBoard,n):
@@ -90,6 +91,15 @@ for z in range(9):
         if z + 1 not in chx(gameBoard,n):
             for y in range(9):
                 boolMap[z][y][n] = 0
-        
 
-print(*boolMap[0], sep='\n')
+for z in range(9):
+    for y in range(9):
+        for x in range(9):
+            s = getS(y,x)
+
+            if z+1 not in chs(gameBoard,s):
+                boolMap[z][y][x] = 0
+
+for i in range(9):
+    print(*boolMap[i], sep='\n')
+    print()
