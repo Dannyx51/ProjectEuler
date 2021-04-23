@@ -1,4 +1,6 @@
-#big
+from time import time
+
+st = time()
 
 def max(a, n, m):
     if n > m:
@@ -7,7 +9,6 @@ def max(a, n, m):
         a += m
     return a
     
-#tree
 t = [[75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
      [95, 64, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
      [17, 47, 82, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -29,3 +30,5 @@ for y in reversed(range(len(t[0])-1)):
         t[y][x] = max(t[y][x],t[y+1][x],t[y+1][x+1])
 
 print(t[0][0])
+print(f"Time taken : {time()-st}")
+#Avg Time Taken: 9E-4 seconds

@@ -1,8 +1,12 @@
+from time import time
+
 def isP(n):
   for i in range(2,int(abs(n)**0.5)+1):
     if n % i == 0:
       return False
   return True
+
+st = time()
 
 #--------------------------------------------------------
 n = 1000

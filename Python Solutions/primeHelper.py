@@ -2,17 +2,29 @@
 from math import gcd
 
 class Prime:
+    
     @staticmethod
-    def relativePrime(n:int, tot = False) -> list: # Returns a list of relative primes to n by default
-        ret = 0                                    # Or returns the number of relative primes to n if tot = true
-        if tot:
-            for i in range(1,n):
-                if not (n % 2) and not (i % 2): continue
-                if gcd(i,n) == 1:
-                    ret += 1
-        else:
-            ret = [i for i in range(n) if gcd(i,n) == 1]
-        return ret
+    def relativePrime(n:int) -> list: # Returns a list of relative primes to n
+        if Prime.isPrime(n):
+            return [i for i in range(1,n)]
+        else:  
+            return [i for i in range(n) if gcd(i,n) == 1]
+
+    @staticmethod
+    def totient(n:int) -> int: # Returns the number of relative primes to n
+        if Prime.isPrime(n): return n - 1
+
+        res = n; p = 2 
+        while p ** 2 <= n:
+            if not n % p:
+                while not n % p:
+                    n //= p
+                res *= 1 - (1 / p)
+            p += 1
+
+        if n > 1: res *= 1 - (1 / n)
+
+        return int(res)
 
     @staticmethod
     def genPrime(n:int, noBool = True, lowerBound = 0) -> list: 
