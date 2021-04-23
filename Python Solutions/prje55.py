@@ -1,6 +1,10 @@
+from time import time
+
 def isPal(n):
     s = str(n)
     return s == s[::-1]
+
+st = time()
 
 l = [True for i in range(10001)]
 
@@ -20,3 +24,5 @@ for i in range(1,len(l)):
     
 fin = len([x for x in range(len(l)) if l[x]]) - 1
 print(fin) # -1 because 0 is true and i cba to fix it up above, this is easier
+print(f"Time taken : {time() - st}")
+#Avg Time Taken: 5E-2 seconds

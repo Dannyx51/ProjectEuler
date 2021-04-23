@@ -1,3 +1,5 @@
+from time import time
+
 maxD = 100
 
 ls = [i ** 2 for i in range(1,maxD ** 2)]

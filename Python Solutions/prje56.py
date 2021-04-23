@@ -11,3 +11,4 @@ for a in range(2,101):
         total = cur if cur > total else total
 print(total)
 print(f"Time Taken : {t.time() - st}")
+#Avg Time Taken: .15 seconds
