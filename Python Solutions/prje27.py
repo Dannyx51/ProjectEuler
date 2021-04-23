@@ -35,20 +35,6 @@ m = 0
 prod = 0
 for b in lp:
   for a in lp:
-    
-    n = 0
-    while True:
-      f = n**2 + (a * n) + b
-      if f not in l:
-        if isP(f):
-          l.append(f)
-        else:
-          if n - 1 > m:
-            m = n - 1
-            prod = a * b
-            break
-      n += 1
-
     n = 0
     while True:
       f = n**2 + (-a * n) + b
@@ -61,5 +47,5 @@ for b in lp:
             prod = -a * b
             break
       n += 1
-    print(m)
+
 print(prod)

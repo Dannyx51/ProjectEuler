@@ -1,3 +1,4 @@
+from time import time
 #An integer x is triangular exactly if 8x + 1 is a square.
 
 def isT(n):
@@ -7,7 +8,9 @@ def isT(n):
     else:
         return False
 
-txt = open("C:\\Users\\dhaan\\Documents\\PythonPrjs\\ProjectEuler\\prje42_words.txt","r")
+st = time()
+
+txt = open("Python Solutions\\prje42_words.txt","r")
 raw = txt.read()
 txt.close()
 raw = raw.replace("\"","")
@@ -22,3 +25,5 @@ for i in lw:
         count += 1
 
 print(count)
+print(f"Time taken : {time() - st}")
+#Avg Time Taken: 3E-3 seconds

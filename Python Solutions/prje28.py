@@ -1,3 +1,7 @@
+from time import time
+
+st = time()
+
 #change n to change the size of the spiral, dont touch the rest
 n = 1001
 
@@ -18,3 +22,5 @@ for i in range(1 + 4 * ((n - 1) // 2)):
     t += 1
 
 print(total)
+print(f"Time taken : {time() - st}")
+#Avg Time Taken: .15~ seconds

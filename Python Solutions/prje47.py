@@ -1,3 +1,5 @@
+from time import time
+
 def findFirst(num):
     x = 2
     while x != num:
@@ -5,6 +7,8 @@ def findFirst(num):
             if x != None : return x
         x += 1
     return num
+
+st = time()
 
 search = 4
 
@@ -31,3 +35,5 @@ while True:
     num += 1
 
 print(num - (search - 1))
+print(f"Time taken : {time() - st}")
+#Avg Time Taken: 5E-2 seconds
