@@ -14,4 +14,4 @@ for d in range(2,search):
 print(f"Target:      3 / 7      -> {3/7}")
 print(f"Found : {mn} / {md} -> {mn/md}")
 print(f"Time taken : {time() - st}")
-#Avg Time Taken: 0.5~ seconds
+#Avg Time Taken: 0.15~ seconds
