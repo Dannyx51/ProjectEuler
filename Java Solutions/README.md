@@ -1,4 +1,4 @@
-**Java Project Euler Solutions**\
+# **Java Project Euler Solutions**
 *-by Lincoln Edsall*
 
 Personal rules:
