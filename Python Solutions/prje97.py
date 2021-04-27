@@ -15,4 +15,4 @@ number = str(number)
 
 print(number[len(number) - 10:])
 print("Time taken :", time() - st)
-#Avg Time Taken : 0.176 seconds
+#Avg Time Taken : 4E-2 seconds
