@@ -5,13 +5,17 @@ class Prime:
     
     @staticmethod
     def relativePrime(n:int) -> list: # Returns a list of relative primes to n
+        Prime.__evalInputs((n,int))
+        
         if Prime.isPrime(n):
             return [i for i in range(1,n)]
         else:  
             return [i for i in range(n) if gcd(i,n) == 1]
-
+    
     @staticmethod
     def totient(n:int) -> int: # Returns the number of relative primes to n
+        Prime.__evalInputs((n,int))
+                
         if Prime.isPrime(n): return n - 1
 
         res = n; p = 2 
@@ -30,6 +34,8 @@ class Prime:
     def genPrime(n:int, noBool = True, lowerBound = 0) -> list: 
         # Generates an integer list of primes between lowerBound and n,
         # if noBool = False, returns an boolean list in range(lowerBound,n) where if index is prime, value is true
+        Prime.__evalInputs((n,int),(noBool,bool), (lowerBound,int))
+
         prime = [True for i in range(n+1)] 
         p = 2
         while (p * p <= n):             
@@ -48,6 +54,8 @@ class Prime:
 
     @staticmethod
     def isPrime(n:int) -> bool: # returns if a number is prime or not
+        Prime.__evalInputs((n,int))
+
         if n <= 1: return False
         if n == 2: return True
         if not n % 2: return False
@@ -64,6 +72,8 @@ class Prime:
 
     @staticmethod
     def isPseudoPrime(n:int) -> bool: #returns if a number is pseudoprime/prime
+        Prime.__evalInputs((n,int))
+        
         if n <= 1: return False 
         if n == 2: return True
         if not n % 2: return False
@@ -91,3 +101,11 @@ class Prime:
 
         if xi1 != 1: return True
         return False
+
+    def __evalInputs(*args:tuple): # Ensures that the inputs are exactly what we're looking for.
+        l = []
+        for x in args:
+            if type(x[0]) != x[1]:
+                l.append(f"'{str(x[0])}' is not a {(x[1].__name__)}")
+        if l:
+            raise TypeError(*l)
