@@ -31,8 +31,7 @@ class Prime:
         return int(res)
 
     @staticmethod
-    def genPrime(n:int, noBool = True, lowerBound = 0) -> list: 
-        # Generates an integer list of primes between lowerBound and n,
+    def genPrime(n:int, noBool = True, lowerBound = 0) -> list: # Generates an integer list of primes between lowerBound and n,
         # if noBool = False, returns an boolean list in range(lowerBound,n) where if index is prime, value is true
         Prime.__evalInputs((n,int),(noBool,bool), (lowerBound,int))
 
