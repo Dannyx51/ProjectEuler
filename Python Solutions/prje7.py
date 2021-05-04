@@ -1,26 +1,19 @@
 from time import time
+from primeHelper import Prime
 
 st = time()
 
-n = 1000000
+prime = Prime.genPrime(1000000) 
 
-prime = [True for i in range(n+1)] 
-p = 2
-while (p * p <= n): 
-        
-    # If prime[p] is not changed, then it is a prime 
-    if (prime[p] == True): 
-            
-        # Update all multiples of p 
-        for i in range(p * p, n+1, p): 
-            prime[i] = False
-    p += 1
-
-lp = []
-for i in range(len(prime)):
-    if prime[i]:
-        lp.append(i)
-
-print(lp[10002])
+print(prime[10000])
 print(f"Time taken : {time() - st}")
 #Avg Time Taken: 0.33 seconds
+
+# Problem:
+    # By listing the first six prime numbers: 2, 3, 5, 7, 11, and 13, we can see that the 6th prime is 13.
+    # What is the 10001st prime number?
+
+# Solution:
+    # Generate a list of primes under 1 million (there are more than 10k primes in this range)
+        #   See the code of primeHelper.py to understand how I'm generating a list of primes.
+    # print the 10000th index as all indices are actually one behind actual
