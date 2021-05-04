@@ -16,11 +16,11 @@ print(ans)
 print(f"Time taken : {time() - st}")
 #Avg Time Taken: ~0.44 second
 
-#Problem:
+# Problem:
     # A palindromic number reads the same both ways. The largest palindrome made from the product of two 2-digit numbers is 9009 = 91 × 99.
     # Find the largest palindrome made from the product of two 3-digit numbers.
 
-#Solution:
+# Solution:
     # Multiply every combination of a 3 digit number * 3 digit number
     # If the result (n) is palindromic, check to see if it's bigger than anything found previously
     # return the largest (n) found.
