@@ -1,5 +1,6 @@
 #IGNORE THE DAMN THING ISTG
 /__pycache__
 
-#ignoring the personal testing file
+#ignoring the personal testing file and gitignore
 test.py
+.gitignore

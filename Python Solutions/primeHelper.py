@@ -10,8 +10,6 @@ class Prime:
     
         Parameters:
             n (int) -- a number that you want to 
-
-            
         """
 
         Prime.__evalInputs((n,int))
