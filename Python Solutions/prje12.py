@@ -16,11 +16,10 @@ def d(n):
 def t(n):
     return (n**2 + n) // 2
 
-
 st = time()
+
 j = 0
 while True:
-    #print(t(j))
     if(d(t(j)) > 500):
         break
     j += 1

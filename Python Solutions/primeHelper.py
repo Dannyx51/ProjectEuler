@@ -4,7 +4,16 @@ from math import gcd
 class Prime:
     
     @staticmethod
-    def relativePrime(n:int) -> list: # Returns a list of relative primes to n
+    def relativePrime(n:int) -> list:
+        """
+        Returns a list of numbers that are relative prime to {n}
+    
+        Parameters:
+            n (int) -- a number that you want to 
+
+            
+        """
+
         Prime.__evalInputs((n,int))
         
         if Prime.isPrime(n):
