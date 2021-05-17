@@ -1,17 +1,17 @@
 from time import time
-from primeHelper import Prime
+from primeHelper import isPrime
 
 st = time()
 
 i = 3
 while True:
     found = True
-    isP = Prime.isPrime(i)
+    isP = isPrime(i)
     if not isP:
         for x in range(1,i):
             n = i - 2 * (x ** 2)
             
-            if Prime.isPrime(n):
+            if isPrime(n):
                 found = False
                 break
         

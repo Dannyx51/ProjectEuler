@@ -1,10 +1,10 @@
-from primeHelper import Prime
+from primeHelper import genPrime, isPrime
 from collections import Counter
 from time import time
 
 st = time()
 
-lp = [x for x in Prime.genPrime(200000) if len(str(x)) - len(set(str(x))) >= 3]
+lp = [x for x in genPrime(200000) if len(str(x)) - len(set(str(x))) >= 3]
 
 def rep(s:int) -> list:
     ret = []
@@ -21,7 +21,7 @@ def validate(l:list) -> int:
     ret = []
     for i in l:
         checked.add(i)
-        if Prime.isPrime(i): ret.append(i)
+        if isPrime(i): ret.append(i)
 
     return len(ret)
 

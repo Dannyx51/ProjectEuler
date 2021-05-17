@@ -1,12 +1,10 @@
-from primeHelper import Prime
+from primeHelper import genPrime, isPrime
 from time import time
-
-isPrime = Prime.isPrime
 
 limit = 10000
 
-lp = set(Prime.genPrime(limit))
-searchlist = set(Prime.genPrime(pow(10,6)))
+lp = set(genPrime(limit))
+searchlist = set(genPrime(pow(10,6)))
 
 def check(a:int,b:int) -> bool:
     v1 = int(str(a) + str(b))

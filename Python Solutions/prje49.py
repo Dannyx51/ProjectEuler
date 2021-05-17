@@ -1,6 +1,6 @@
 import time
 from itertools import permutations
-from primeHelper import Prime
+from primeHelper import genPrime
 
 def checkdif(n):
   for i in range(len(n)-1):
@@ -12,7 +12,7 @@ def checkdif(n):
 
 st = time.time()
 
-lp = Prime.genPrime(10000,lowerBound = 1500)
+lp = genPrime(10000,lowerBound = 1500)
 
 for i in lp:
   p = list(permutations(str(i)))

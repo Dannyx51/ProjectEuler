@@ -1,13 +1,13 @@
 from itertools import permutations
 from functools import reduce
 from time import time
-from primeHelper import Prime
+from primeHelper import genPrime
 
 st = time()
 
 l = [int(reduce(lambda x,y: x + y, p)) for p in list(permutations("1234567"))]
 
-lp = Prime.genPrime(7654321,lowerBound = 7123456)
+lp = genPrime(7654321,lowerBound = 7123456)
 
 lpan = []  
 for i in l:

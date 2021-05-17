@@ -1,11 +1,11 @@
-from primeHelper import Prime
+from primeHelper import totient
 from time import time
 
 st = time()
 
 s = 0
 for i in range(1,1000000 + 1):
-    s += Prime.totient(i)
+    s += totient(i)
 
 print(s)
 print(f"Time taken : {time() - st}")

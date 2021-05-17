@@ -1,5 +1,5 @@
 from time import time
-from primeHelper import Prime
+from primeHelper import isPseudoPrime
 
 st = time()
 
@@ -11,7 +11,7 @@ while (numPrimes/(2 * step + 1)) > 0.1:
     step += 2
     for i in range(3):
         cur += step
-        if Prime.isPseudoPrime(cur): numPrimes += 1
+        if isPseudoPrime(cur): numPrimes += 1
     cur += step
 
 print(step + 1)

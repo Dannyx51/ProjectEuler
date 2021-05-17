@@ -1,9 +1,9 @@
 from time import time
-from primeHelper import Prime
+from primeHelper import genPrime
 
 st = time()
 
-ans = sum(Prime.genPrime(2000000))
+ans = sum(genPrime(2000000))
 
 print(ans)
 print(f"Time taken : {time() - st}")

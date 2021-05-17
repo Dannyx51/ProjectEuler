@@ -1,10 +1,10 @@
 from time import time
-from primeHelper import Prime
+from primeHelper import genPrime
 
 st = time()
 n = 1000000
 
-prime = Prime.genPrime(n, noBool = False)
+prime = genPrime(n, noBool = False)
 
 count = 0
 for i in range(2,n):

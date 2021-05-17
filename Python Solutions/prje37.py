@@ -1,10 +1,10 @@
-from primeHelper import Prime
+from primeHelper import genPrime
 from time import time
 
 st = time()
 n = 1000000 #im hoping that this has the set im looking for in it
 
-prime = Prime.genPrime(n, noBool = False) 
+prime = genPrime(n, noBool = False) 
 
 l = []
 for i in range(10,len(prime)):

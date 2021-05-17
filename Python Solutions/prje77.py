@@ -1,9 +1,9 @@
-from primeHelper import Prime as p
+from primeHelper import genPrime
 from time import time
 
 st = time()
 
-lp = p.genPrime(100, lowerBound=2)
+lp = genPrime(100, lowerBound=2)
 
 cur = 2
 while True:

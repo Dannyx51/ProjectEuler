@@ -1,10 +1,10 @@
 from time import time
-from primeHelper import Prime
+from primeHelper import genPrime
 
 st = time()
 
 limit = 1000000
-lp = Prime.genPrime(limit)
+lp = genPrime(limit)
 
 tlen = 0; find = 0; jl = len(lp)
 for i in range(len(lp)):
