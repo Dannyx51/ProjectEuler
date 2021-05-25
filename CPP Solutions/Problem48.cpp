@@ -1,5 +1,5 @@
 #include <iostream>
-#inlcude <chrono>
+#include <chrono>
 
 using namespace std;
 using namespace chrono;
@@ -19,9 +19,9 @@ int main()
 		s = stol(str);
 	}
   auto end = high_resolution_clock::now();
-  auto dura = duration_cast<microseconds>(end - start);
+  auto dura = duration_cast<milliseconds>(end - start);
 	cout << s << endl;
-  cout << "Solution found in " << dura.count() << " microseconds" << endl;
+  cout << "Solution found in " << dura.count() << " milliseconds" << endl;
 }
 
 long lTen(int a, int b){
