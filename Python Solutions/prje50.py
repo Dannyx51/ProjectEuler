@@ -21,4 +21,4 @@ for i in range(len(lp)):
 
 print(find)
 print(f"Time taken : {time() - st}")
-#Avg Time Taken:  seconds
+#Avg Time Taken: 0.65~ seconds
