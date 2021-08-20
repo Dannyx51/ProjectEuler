@@ -14,7 +14,7 @@ int main() {
         }
     }
     auto end = high_resolution_clock::now();
-    auto diff = duration_cast<nonseconds>(end - start);
+    auto diff = duration_cast<nanoseconds>(end - start);
     cout << sum << " Solution found in " << diff.count() << " nanoseconds " << endl;
     return 0;
 }
